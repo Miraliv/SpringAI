@@ -1,85 +1,103 @@
 body {
     margin: 0;
-    font-family: 'Inter', sans-serif;
-    background: #f4f7fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte mais moderna */
+    background: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%); /* Gradiente suave */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh; /* Garante que ocupa a altura total da tela */
 }
 
 .chat-container {
-    background: #ffffff;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-    width: 100%;
-    max-width: 600px;
+    background: #fff;
+    border-radius: 15px; /* Bordas mais arredondadas */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+    width: 90%; /* Ocupa mais largura em telas menores */
+    max-width: 700px; /* Largura máxima para telas maiores */
     display: flex;
     flex-direction: column;
+    padding: 25px; /* Aumenta o padding interno */
 }
 
-h1 {
+.chat-title {
     text-align: center;
-    margin-bottom: 1.5rem;
-    color: #333;
+    margin-bottom: 25px; /* Mais espaço abaixo do título */
+    color: #374151; /* Cor de texto mais escura e moderna */
+    font-size: 2rem; /* Aumenta o tamanho da fonte do título */
 }
 
 .chat-box {
-    flex: 1;
+    flex-grow: 1; /* Permite que a caixa de chat cresça */
     overflow-y: auto;
-    max-height: 400px;
-    margin-bottom: 1rem;
-    padding: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background: #f0f4ff;
+    max-height: 500px; /* Aumenta a altura máxima da caixa de chat */
+    margin-bottom: 20px; /* Mais espaço abaixo da caixa de chat */
+    padding: 15px; /* Aumenta o padding interno */
+    border: 1px solid #E5E7EB; /* Borda mais clara */
+    border-radius: 10px; /* Bordas mais arredondadas */
+    background: #F9FAFB; /* Cor de fundo levemente acinzentada */
+    display: flex;
+    flex-direction: column; /* Garante que as mensagens fiquem em coluna */
+    gap: 10px; /* Espaçamento entre as mensagens */
 }
 
 .mensagem {
-    margin: 0.5rem 0;
-    padding: 0.75rem 1rem;
-    border-radius: 12px;
+    padding: 12px 18px; /* Padding maior dentro das mensagens */
+    border-radius: 20px; /* Bordas mais arredondadas para as mensagens */
     max-width: 80%;
     word-wrap: break-word;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Sombra sutil nas mensagens */
+    font-size: 1rem; /* Tamanho de fonte padrão para as mensagens */
 }
 
 .usuario {
-    align-self: flex-end;
-    background-color: #4f46e5;
+    align-self: flex-end; /* Alinha as mensagens do usuário à direita */
+    background-color: #6366F1; /* Cor primária mais vibrante */
     color: #fff;
+    border-bottom-right-radius: 0; /* Remove o arredondamento inferior direito para efeito de "balão" */
 }
 
 .bot {
-    align-self: flex-start;
-    background-color: #e5e7eb;
-    color: #111827;
+    align-self: flex-start; /* Alinha as mensagens do bot à esquerda */
+    background-color: #E0F2FE; /* Cor secundária mais clara */
+    color: #1E293B; /* Cor de texto mais escura para contraste */
+    border-bottom-left-radius: 0; /* Remove o arredondamento inferior esquerdo para efeito de "balão" */
 }
 
-form {
+.chat-input-area {
     display: flex;
-    gap: 10px;
+    gap: 15px; /* Mais espaço entre o input e o botão */
 }
 
-input[type="text"] {
-    flex: 1;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+.chat-input {
+    flex-grow: 1;
+    padding: 15px; /* Aumenta o padding do input */
+    border: 1px solid #D1D5DB; /* Borda mais clara */
+    border-radius: 10px; /* Bordas mais arredondadas */
+    font-size: 1rem;
+    outline: none; /* Remove a borda de foco padrão */
+}
+
+.chat-input:focus {
+    border-color: #6366F1; /* Cor da borda ao receber foco */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* Sombra sutil ao receber foco */
+}
+
+.chat-button {
+    padding: 15px 25px; /* Aumenta o padding do botão */
+    background-color: #6366F1; /* Cor primária vibrante */
+    color: #fff;
+    border: none;
+    border-radius: 10px; /* Bordas mais arredondadas */
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s ease-in-out; /* Transição mais rápida */
     font-size: 1rem;
 }
 
-button {
-    padding: 12px 20px;
-    background-color: #4f46e5;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
+.chat-button:hover {
+    background-color: #4F46E5; /* Cor ligeiramente mais escura no hover */
 }
 
-button:hover {
-    background-color: #4338ca;
+.chat-button:active {
+    background-color: #4338CA; /* Cor ainda mais escura ao clicar */
 }
