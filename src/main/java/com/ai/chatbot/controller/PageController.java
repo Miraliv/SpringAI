@@ -1,6 +1,6 @@
-package com.seuprojeto.chatbot.controller;
+package com.ai.chatbot.controller;
 
-import com.seuprojeto.chatbot.service.ChatService;
+import com.ai.chatbot.service.ChatService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,4 +1,4 @@
-package com.seuprojeto.chatbot.model;
+package com.ai.chatbot.model;
 
 import lombok.Data;
 

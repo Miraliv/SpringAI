@@ -1,7 +1,7 @@
-package com.seuprojeto.chatbot.controller;
+package com.ai.chatbot.controller;
 
-import com.seuprojeto.chatbot.model.Mensagem;
-import com.seuprojeto.chatbot.service.ChatService;
+import com.ai.chatbot.model.Mensagem;
+import com.ai.chatbot.service.ChatService;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
